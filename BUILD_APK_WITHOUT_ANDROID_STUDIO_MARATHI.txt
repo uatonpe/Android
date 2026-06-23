@@ -1,0 +1,33 @@
+ANIK One Desk - Android Studio शिवाय APK कसा बनवायचा
+
+ही ZIP GitHub Actions cloud build साठी ready आहे. तुमच्या laptop मध्ये Android Studio, Android SDK किंवा Gradle install करण्याची गरज नाही.
+
+पद्धत 1: GitHub Actions ने APK build करा
+1) github.com वर login करा.
+2) New repository तयार करा. Repository name: ANIK-One-Desk-App
+3) या ZIP मधील ANIK_One_Desk_Android_App folder मधील सर्व files repository मध्ये upload करा.
+   महत्त्वाचे: app, build.gradle, settings.gradle आणि .github folder root मध्ये दिसले पाहिजेत.
+4) Upload केल्यानंतर repository मधील Actions tab उघडा.
+5) "Build ANIK One Desk APK" workflow उघडा.
+6) Run workflow वर click करा.
+7) Build complete झाल्यावर त्याच page च्या खाली Artifacts मध्ये "ANIK-One-Desk-debug-apk" download करा.
+8) ZIP extract केल्यावर app-debug.apk मिळेल.
+9) तो APK phone मध्ये install करा.
+
+App Details:
+- App Name: ANIK One Desk
+- Package: com.anik.onedesk
+- Same HTML portal app/src/main/assets/index.html मध्ये आहे.
+- Password save / auto login localStorage मध्येच राहील.
+- App uninstall किंवा Clear Data केल्यास saved login remove होईल.
+
+जर GitHub Actions मध्ये error आला:
+- Repository मध्ये .github/workflows/build-apk.yml आहे का ते check करा.
+- Files nested folder मध्ये upload झाल्या नाहीत ना ते check करा. Root मध्ये app folder असला पाहिजे.
+- Actions परवानगी मागितली तर "I understand my workflows" / Enable Actions करा.
+
+पद्धत 2: APK नको असेल तर PWA वापरा
+1) ANIK_One_Desk_PWA_App.zip hosting वर upload करा.
+2) mobile Chrome मध्ये URL open करा.
+3) Add to Home Screen / Install App करा.
+4) हे APK नसले तरी mobile app सारखेच चालते.
